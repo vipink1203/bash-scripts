@@ -1,0 +1,32 @@
+#!/bin/bash
+# This script will stop and start a specific instance, depending on which parameter is passed
+#/usr/local/bin/aws
+
+
+export AWS_ACCESS_KEY_ID='adsalhfasfnajadfahj'
+export AWS_SECRET_ACCESS_KEY='asdfaenrdsalna23234sdgksdf'
+export AWS_DEFAULT_REGION='ap-southeast-1'
+
+# Replace the instance ID below with the instance you want to stop / start
+INSTANCEID="i-icalslj4w"
+
+if [ "$1" == "" ]; then
+  echo "Usage: ./scriptname start (or) ./scriptname stop"
+  exit 1
+fi
+
+case $1 in
+start)
+  echo "Starting instance $INSTANCEID "
+  /usr/local/bin/aws ec2 start-instances --instance-ids $INSTANCEID
+  ;;
+stop)
+  echo "Stopping instance "
+  /usr/local/bin/aws ec2 stop-instances --instance-ids $INSTANCEID
+  ;;
+*)
+  echo "Unknown option $INSTANCEID"
+  ;;
+esac
+
+##### End of Script #####
