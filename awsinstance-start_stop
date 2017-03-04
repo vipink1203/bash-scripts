@@ -1,7 +1,8 @@
 #!/bin/bash
-# This script will stop and start a specific instance, depending on which parameter is passed
-#/usr/local/bin/aws
-
+#	Author:	@vipink1203
+#	Web:	www.webnuxpro.com
+# 	This script will stop and start a specific instance, depending on which parameter is passed
+#	Last	Edited:	March	4	2017
 
 export AWS_ACCESS_KEY_ID='adsalhfasfnajadfahj'
 export AWS_SECRET_ACCESS_KEY='asdfaenrdsalna23234sdgksdf'
