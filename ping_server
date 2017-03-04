@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#	Author:	@vipink1203
+#	Web:	www.webnuxpro.com
+#	Script	to ping the server and if its down will send you the mail.
+#	Last	Edited:	March	4	2017
+
+read -p "Enter the server ip or hostname that you want to check: " server
+
+if [ "$server" == "" ]; then
+echo "Please enter server IP"
+else 
+ping -c3 $server > /dev/null 2>&1 || echo "$server is down..." | mutt -s "Critical - Server Down" example@webnuxpro.com
+
+fi
