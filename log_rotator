@@ -6,7 +6,7 @@
 #	Last	Edited:	March	6	2017
 
 if [ "$1" == "" ]; then
-  echo "Usage: <script.sh> <directory path>"
+  echo "Usage: <script.sh> <directory path>"  # DOnt use a trailing slash after directory name
   exit 1
 fi
 
