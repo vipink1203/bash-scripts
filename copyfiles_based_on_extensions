@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#	Author:	@vipink1203
+#	Web:	www.webnuxpro.com
+#	Script to copy files based on extensions
+#	Last	Edited:	March	6	2017
+
+
+clear
+
+read -p "Enter the source directory: " src
+read -p "Enter the target directory: " target
+
+if [ -d $src -a -d $target ]; then
+  sleep 1
+else
+  echo "Invalid directory path"
+  exit 1
+fi
+
+read -p "Enter the file extension that you want to copy over to target directory: " ext
+
+lists=`ls ${src}/*.$ext`
+
+for file in ${lists}; do
+  basefile=$(basename $(echo $file | cut -d "." -f1))
+  if [ -d ${target}/$basefile ]; then
+    cp $file ${target}/${basefile}/
+  else
+    mkdir ${target}/$basefile && cp $file ${target}/${basefile}/
+  fi
+done
