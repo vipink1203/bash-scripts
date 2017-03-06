@@ -2,7 +2,7 @@
 
 #	Author:	@vipink1203
 #	Web:	www.webnuxpro.com
-#	Script to copy files based on extensions
+#	Script to copy files based on extensions. Checks the source file lists with the target directory list. Creates a directory same as the source file name (leaving the extension) if it doesn't exists and copies the source files to the same named directories. 
 #	Last	Edited:	March	6	2017
 
 
