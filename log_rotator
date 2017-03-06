@@ -13,10 +13,10 @@ fi
 dir=$1
 
 if [ -d $1 ]; then
-	size=$(du -s --block-size=G $1 | cut -c1-1 )
-	if [ $size -gt 3 ]; then
-		search=`ls -t $1 | tail -n +3 | xargs rm --`
-		echo $search > removedfiles.log
+	size=$(du -sh --block-size=G $1 | cut -c1-1 )
+	if [ "$size" > 3 ]; then
+		search=`xargs rm -f <<< $(ls -t ${dir}/* | tail -n +3)`
+#		echo $search > removedfiles.log
   	else
     		echo "Size is less than 3 GB."
   	fi
@@ -26,3 +26,7 @@ else
   echo "Usage: <script.sh> <directory path>"
   exit
 fi
+
+#if [ "$size" < 3 ]; then
+#	echo "Size is less than 3 GB"
+#fi
