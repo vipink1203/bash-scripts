@@ -20,6 +20,13 @@ sleep 2
 
 read -sp "Press any key to continue: " choice
 
+
+
+
+
+
+
+
 read -p "Enter the database name you want to backup: " database_name
 read -p "Enter the username: " database_user
 read -sp "Enter the password: " database_pass
@@ -32,6 +39,12 @@ echo "**********************************************************"
 echo 
 echo 
 echo "Your backup files are stored under $HOME/$backup_dir/"
+
+
+
+
+
+
 
 
 
