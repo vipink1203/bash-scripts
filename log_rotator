@@ -1,15 +1,14 @@
 #!/bin/bash
 
 #	Author:	@vipink1203
-#	Web:	www.webnuxpro.com
+#	Web:	www.vipinkumar.me
 #	Script to check the log directory . if the size is more than 3 GB, it will keep the last two written log and delete the old ones
-#	Last	Edited:	March	6	2017
+#	LastEdited:	March	6	2017
 
 if [ "$1" == "" ]; then
   echo "Usage: <script.sh> <directory path>"  # DOnt use a trailing slash after directory name
   exit 1
 fi
-
 dir=$1
 
 if [ -d $1 ]; then
