@@ -1,8 +1,7 @@
 #!/bin/bash
 #	Author:	@vipink1203
-#	Web:	www.vipinkumar.me
-#	Script to run a command in loop with different values \
-#           but if it fails then it should retry the same again in 10 secs
+#	Web: www.vipinkumar.me
+#	UseCase: Script to run a command in loop with different values but if it fails then it should retry the same again in 10 secs
 #	LastEdited:	1 Apr 2020
 
 
