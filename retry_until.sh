@@ -1,8 +1,8 @@
 #!/bin/bash
-#	Author:	@vipink1203
-#	Web: www.vipinkumar.me
-#	UseCase: Script to run a command in loop with different values but if it fails then it should retry the same again in 10 secs
-#	LastEdited:	1 Apr 2020
+# Author:	@vipink1203
+# Web: www.vipinkumar.me
+# UseCase: Script to run a command in loop with different values but if it fails then it should retry the same again in 10 secs
+# LastEdited:	1 Apr 2020
 
 
 months=(5 6 7 8 9 10 11 12)
