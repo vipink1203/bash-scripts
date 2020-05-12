@@ -5,6 +5,12 @@
 # Reference: https://support.maxmind.com/geoip-faq/geoip2-and-geoip-legacy-database-updates/how-often-are-the-geoip2-and-geoip-legacy-databases-updated/
 # 0 05 * * 2 -->>> "At 05:00 on Tuesday."
 
+## Description:
+# When downloading the file, each file has the format of name such as 'GeoIP2-Country_20200512'.
+# we are adding $dbname as GeoIP2-Country type DB and $dirday as 20200512 which is the date. $dirname refers to directory name 'GeoIP2-Country_20200512'
+# Also, if the backup is downloaded to the S3 make sure to have the hirarchy as s3://databases-backup/maxmind/${dbname}/${dirday}
+
+
 
 #Getting license from SSM
 license=`aws ssm get-parameter --name /dev/MAXMIND/MAX_MIND_LICENSE --region us-east-1| jq -r ".Parameter.Value"`
